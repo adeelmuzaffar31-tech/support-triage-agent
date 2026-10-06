@@ -1,0 +1,29 @@
+{
+  "name": "support-triage-agent",
+  "version": "1.0.0",
+  "description": "An LLM agent that triages customer-support messages through validated tool contracts, with retries, structured tracing, a human-approval queue and an evaluation harness.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Adeel Muzaffar",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "triage": "tsx src/cli.ts",
+    "eval": "tsx eval/run.ts",
+    "approvals": "tsx src/approvals-cli.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

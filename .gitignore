@@ -1,0 +1,4 @@
+node_modules/
+.env
+*.log
+eval/results.json
